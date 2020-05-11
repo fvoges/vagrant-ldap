@@ -1,0 +1,70 @@
+dn: uid=vault,ou=people,dc=foo,dc=com
+cn: vault
+cn: Vault User
+sn: Admin_user
+uid: vault
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+userPassword: password
+
+dn: uid=thor,ou=People,dc=foo,dc=com
+objectClass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Thor
+cn: Donald Blake
+sn: Thunder
+uid: thor
+userPassword: password
+
+dn: uid=captainamerica,ou=People,dc=foo,dc=com
+objectClass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: capamerica
+cn: Steve Rogers
+sn: Cool
+uid: captainamerica
+userPassword: password
+
+dn: uid=hulk,ou=People,dc=foo,dc=com
+objectClass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Hulk
+cn: Bruce Banner
+sn: Smash
+uid: hulk
+userPassword: password
+
+dn: uid=wolverine,ou=People,dc=foo,dc=com
+objectClass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Wolverine
+cn: Logan
+sn: Claws
+uid: wolverine
+userPassword: password
+
+dn: uid=cyclops,ou=people,dc=foo,dc=com
+objectClass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Cyclops
+cn: Scott Summers
+sn: Eyes
+uid: cyclops
+userPassword: password
+
+dn: uid=beast,ou=People,dc=foo,dc=com
+objectClass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Beast
+cn: Hank Mccoy
+sn: Hairy
+uid: beast
+userPassword: password

@@ -1,0 +1,9 @@
+dn: ou=people,dc=foo,dc=com
+objectClass: organizationalunit
+ou: people
+description: All people in organisation
+
+dn: ou=groups,dc=foo,dc=com
+objectClass: organizationalunit
+ou: groups
+description: All groups within the organisation

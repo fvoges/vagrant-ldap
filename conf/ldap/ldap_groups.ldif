@@ -1,0 +1,23 @@
+dn: cn=avengers,ou=groups,dc=foo,dc=com
+objectClass: groupOfNames
+cn: avengers
+description: Avengers Assemble
+member: uid=thor,ou=People,dc=foo,dc=com
+member: uid=captainamerica,ou=People,dc=foo,dc=com
+member: uid=hulk,ou=People,dc=foo,dc=com
+
+dn: cn=xmen,ou=groups,dc=foo,dc=com
+objectClass: groupOfNames
+cn: xmen
+ou: groups
+description: Mutants Rule
+member: uid=wolverine,ou=People,dc=foo,dc=com
+member: uid=cyclops,ou=People,dc=foo,dc=com
+member: uid=beast,ou=People,dc=foo,dc=com
+
+dn: cn=vaultadmin,ou=groups,dc=foo,dc=com
+objectClass: groupOfNames
+cn: VaultAdmin
+ou: groups
+description: Vault Admin
+member: uid=vault,ou=People,dc=foo,dc=com

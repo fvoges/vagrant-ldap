@@ -1,0 +1,31 @@
+
+
+ldapadd -x -H ldap://127.0.0.1:389/ -D "cn=admin,dc=foo,dc=com" -W -f ldap_base.ldif
+sudo ldapadd -Q -Y EXTERNAL -H ldapi:/// -f load_memberof.ldif
+sudo ldapadd -Q -Y EXTERNAL -H ldapi:/// -f load_memberof_overlay.ldif
+ldapadd -x -H ldap://127.0.0.1:389/ -D "cn=admin,dc=foo,dc=com" -W -f ldap_users.ldif
+
+
+ldapsearch -x -LLL -H ldap:/// -b uid=beast,ou=people,dc=foo,dc=com dn memberof
+
+ldapsearch -x -LLL -H ldap://127.0.0.1:389/  \
+-D "cn=admin,dc=foo,dc=com" \
+-b "dc=foo,dc=com"  \
+-W
+
+ldapsearch -x -LLL -H ldap://127.0.0.1:389/  \
+-D "cn=admin,dc=foo,dc=com" \
+-b "ou=people,dc=foo,dc=com" \
+-s sub "(&(objectClass=inetOrgPerson)(uid=beast))" \
+memberOf -W
+
+ldapsearch -x -LLL -H ldap://127.0.0.1:389/  \
+-D "uid=vault,ou=people,dc=foo,dc=com" \
+-b "ou=people,dc=foo,dc=com" \
+-s sub "(&(objectClass=inetOrgPerson)(uid=beast))" \
+memberOf -W
+
+
+ldappasswd -H ldap://127.0.0.1:389 -x \
+-D "cn=admin,dc=foo,dc=com" \
+-W -S "uid=vault,ou=people,dc=foo,dc=com"
