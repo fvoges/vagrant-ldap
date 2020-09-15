@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
     subconfig.vm.network "private_network", ip: "10.0.1.100"
     subconfig.vm.network "forwarded_port", guest: 389, host: 389
     subconfig.vm.provision "shell" do |s|
-      s.path =  "installopenldap.sh"
+      s.path =  "install_openldap.sh"
     end
   end
 end
