@@ -9,6 +9,16 @@ objectClass: organizationalPerson
 objectClass: person
 userPassword: password
 
+dn: uid=ironman,ou=People,dc=foo,dc=com
+objectClass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Iron Man
+cn: Tony Stark
+sn: Tony
+uid: ironman
+userPassword: password
+
 dn: uid=thor,ou=People,dc=foo,dc=com
 objectClass: person
 objectclass: organizationalPerson
@@ -37,6 +47,17 @@ cn: Hulk
 cn: Bruce Banner
 sn: Smash
 uid: hulk
+userPassword: password
+
+dn: uid=professorx,ou=People,dc=foo,dc=com
+objectClass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: professorx
+cn: Professor X
+cn: Charles Xavier
+sn: professor
+uid: professorx
 userPassword: password
 
 dn: uid=wolverine,ou=People,dc=foo,dc=com

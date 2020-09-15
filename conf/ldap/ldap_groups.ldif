@@ -5,6 +5,13 @@ description: Avengers Assemble
 member: uid=thor,ou=People,dc=foo,dc=com
 member: uid=captainamerica,ou=People,dc=foo,dc=com
 member: uid=hulk,ou=People,dc=foo,dc=com
+member: uid=ironman,ou=People,dc=foo,dc=com
+
+dn: cn=avengersadmin,ou=groups,dc=foo,dc=com
+objectClass: groupOfNames
+cn: avengersadmin
+description: Avengers Admin
+member: uid=ironman,ou=People,dc=foo,dc=com
 
 dn: cn=xmen,ou=groups,dc=foo,dc=com
 objectClass: groupOfNames
@@ -14,6 +21,14 @@ description: Mutants Rule
 member: uid=wolverine,ou=People,dc=foo,dc=com
 member: uid=cyclops,ou=People,dc=foo,dc=com
 member: uid=beast,ou=People,dc=foo,dc=com
+member: uid=professorx,ou=People,dc=foo,dc=com
+
+dn: cn=xmenadmin,ou=groups,dc=foo,dc=com
+objectClass: groupOfNames
+cn: xmenadmin
+ou: groups
+description: Mutants Admin
+member: uid=professorx,ou=People,dc=foo,dc=com
 
 dn: cn=vaultadmin,ou=groups,dc=foo,dc=com
 objectClass: groupOfNames
