@@ -4,14 +4,34 @@
 
 1. clone the repo
 2. vagrant up
-3. vagrant ssh
-4. sudo dpkg-reconfigure slapd (set your domain and admin passwd)
-5. ldapadd -x -H ldap://127.0.0.1:389/ -D "cn=admin,dc=foo,dc=com" -W -f ldap_base.ldif
-6. sudo ldapadd -Q -Y EXTERNAL -H ldapi:/// -f load_memberof.ldif
-7. sudo ldapadd -Q -Y EXTERNAL -H ldapi:/// -f load_memberof_overlay.ldif
-8. ldapadd -x -H ldap://127.0.0.1:389/ -D "cn=admin,dc=foo,dc=com" -W -f ldap_users.ldif
+
+The LDAP admin credentials are:
+
+- user: `cn=admin,dc=foo,dc=com`
+- password: `admin`
+
+The users are under `ou=people,dc=foo,dc=com`, and the groups under `ou=groups,dc=foo,dc=com`
+
+### Users
+
+The password for all users is `password`
+
+- beast
+- captainamerica
+- cyclops
+- hulk
+- thor
+- vault
+- wolverine
+
+### Groups
+
+- avengers
+- vaultadmin
+- xmen
 
 ### Testing
-```
+
+```shell
 ldapsearch -x -LLL -H ldap:/// -b uid=beast,ou=people,dc=foo,dc=com dn memberof
 ```
